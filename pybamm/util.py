@@ -255,7 +255,13 @@ def rmse(x, y):
 
 
 def load(filename):
-    """Load a saved object"""
+    """Load a saved object from pkl file,
+    a wrapper around pickle.load().
+    
+    Parameters
+    ----------
+    filename : str
+        The file to load the object from."""
     with open(filename, "rb") as f:
         obj = pickle.load(f)
     return obj
